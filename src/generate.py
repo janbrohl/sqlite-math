@@ -143,7 +143,7 @@ int sqlite3_math1_init(
 
 func_create_template = string.Template("""
   rc = sqlite3_create_function(db, "${name}", ${num_args},
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, ${name}Func, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
