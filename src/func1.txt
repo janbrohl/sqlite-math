@@ -1,0 +1,41 @@
+cos:Compute cosine 
+sin:Compute sine 
+tan:Compute tangent 
+acos:Compute arc cosine 
+asin:Compute arc sine 
+atan:Compute arc tangent 
+cosh:Compute hyperbolic cosine 
+sinh:Compute hyperbolic sine 
+tanh:Compute hyperbolic tangent 
+acosh:Compute area hyperbolic cosine 
+asinh:Compute area hyperbolic sine 
+atanh:Compute area hyperbolic tangent 
+exp:Compute exponential function 
+log:Compute natural logarithm 
+log10:Compute common logarithm 
+exp2:Compute binary exponential function 
+expm1:Compute exponential minus one 
+ilogb:Integer binary logarithm 
+log1p:Compute logarithm plus one 
+log2:Compute binary logarithm 
+logb:Compute floating-point base logarithm 
+sqrt:Compute square root 
+cbrt:Compute cubic root 
+erf:Compute error function 
+erfc:Compute complementary error function 
+tgamma:Compute gamma function 
+lgamma:Compute log-gamma function 
+ceil:Round up value 
+floor:Round down value 
+trunc:Truncate value 
+lround:Round to nearest and cast to long integer 
+llround:Round to nearest and cast to long long integer 
+rint:Round to integral value 
+lrint:Round and cast to long integer 
+llrint:Round and cast to long long integer 
+nearbyint:Round to nearby integral value 
+fabs:Compute absolute value 
+frexp_exponent:Get exponent
+frexp_significand:Get significand
+modf_integral:Break into fractional and integral parts -> integral
+modf_fractional:Break into fractional and integral parts -> fractional 

@@ -1,0 +1,16 @@
+atan2:Compute arc tangent with two parameters 
+ldexp:Generate value from significand and exponent 
+scalbn:Scale significand using floating-point base exponent 
+scalbln:Scale significand using floating-point base exponent 
+pow:Raise to power 
+hypot:Compute hypotenuse 
+fmod:Compute remainder of division 
+remainder:Compute remainder 
+copysign:Copy sign 
+nextafter:Next representable value 
+nexttoward:Next representable value toward precise value 
+fdim:Positive difference 
+fmax:Maximum value 
+fmin:Minimum value 
+remquo_quotient:Compute quotient
+remquo_remainder:Compute remainder
