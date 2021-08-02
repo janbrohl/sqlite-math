@@ -1353,349 +1353,349 @@ int sqlite3_math1_init(
   
 
   rc = sqlite3_create_function(db, "cos", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, cosFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "sin", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, sinFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "tan", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, tanFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "acos", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, acosFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "asin", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, asinFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "atan", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, atanFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "cosh", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, coshFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "sinh", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, sinhFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "tanh", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, tanhFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "acosh", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, acoshFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "asinh", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, asinhFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "atanh", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, atanhFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "exp", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, expFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "log", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, logFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "log10", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, log10Func, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "exp2", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, exp2Func, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "expm1", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, expm1Func, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "ilogb", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, ilogbFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "log1p", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, log1pFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "log2", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, log2Func, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "logb", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, logbFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "sqrt", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, sqrtFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "cbrt", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, cbrtFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "erf", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, erfFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "erfc", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, erfcFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "tgamma", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, tgammaFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "lgamma", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, lgammaFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "ceil", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, ceilFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "floor", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, floorFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "trunc", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, truncFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "lround", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, lroundFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "llround", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, llroundFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "rint", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, rintFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "lrint", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, lrintFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "llrint", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, llrintFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "nearbyint", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, nearbyintFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "fabs", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, fabsFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "frexp_exponent", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, frexp_exponentFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "frexp_significand", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, frexp_significandFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "modf_integral", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, modf_integralFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "modf_fractional", 1,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, modf_fractionalFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "atan2", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, atan2Func, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "ldexp", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, ldexpFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "scalbn", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, scalbnFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "scalbln", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, scalblnFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "pow", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, powFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "hypot", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, hypotFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "fmod", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, fmodFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "remainder", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, remainderFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "copysign", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, copysignFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "nextafter", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, nextafterFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "nexttoward", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, nexttowardFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "fdim", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, fdimFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "fmax", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, fmaxFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "fmin", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, fminFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "remquo_quotient", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, remquo_quotientFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "remquo_remainder", 2,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, remquo_remainderFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
 }
   rc = sqlite3_create_function(db, "fma", 3,
-                               SQLITE_UTF8 | SQLITE_INNOCUOUS | SQLITE_DETERMINISTIC,
+                               SQLITE_UTF8 | SQLITE_DETERMINISTIC,
                                NULL, fmaFunc, NULL, NULL);
   if(rc!=SQLITE_OK ){
     return rc;
