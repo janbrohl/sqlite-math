@@ -130,8 +130,8 @@ static void ${name}Func(sqlite3_context *context, int argc, sqlite3_value **argv
 }
 """)
 
-init = """
-int sqlite3_math1_init(
+init_template = string.Template("""
+int sqlite3_${name}_init(
     sqlite3 *db,
     char **pzErrMsg,
     const sqlite3_api_routines *pApi)
@@ -139,7 +139,7 @@ int sqlite3_math1_init(
   int rc = SQLITE_OK;
   SQLITE_EXTENSION_INIT2(pApi);
   
-"""
+""")
 
 func_create_template = string.Template("""
   rc = sqlite3_create_function(db, "${name}", ${num_args},
@@ -157,21 +157,28 @@ footer = """
 with open(here / 'func1.txt', 'rt', encoding='ascii') as f:
     func1 = {
         name: desc
-        for name, _, desc in (line.strip().partition(':') for line in f
-                              if line.strip())
+        for name, _0, desc in (line.strip().partition(':') for line in f
+                               if line.strip())
     }
 with open(here / 'func2.txt', 'rt', encoding='ascii') as f:
     func2 = {
         name: desc
-        for name, _, desc in (line.strip().partition(':') for line in f
-                              if line.strip())
+        for name, _0, desc in (line.strip().partition(':') for line in f
+                               if line.strip())
     }
 with open(here / 'func3.txt', 'rt', encoding='ascii') as f:
     func3 = {
         name: desc
-        for name, _, desc in (line.strip().partition(':') for line in f
-                              if line.strip())
+        for name, _0, desc in (line.strip().partition(':') for line in f
+                               if line.strip())
     }
+
+with open(here / 'potentially-builtin-functions.txt', 'rt',
+          encoding='ascii') as f:
+    pbif = [
+        name for name, _0, _1 in (line.strip().partition('(') for line in f
+                                  if line.strip())
+    ]
 
 with open(here.parent / 'math1.c', 'wt', encoding='ascii') as f:
     f.write(header)
@@ -181,11 +188,34 @@ with open(here.parent / 'math1.c', 'wt', encoding='ascii') as f:
         f.write(func2_template.substitute(name=name, desc=desc))
     for name, desc in func3.items():
         f.write(func3_template.substitute(name=name, desc=desc))
-    f.write(init)
+    f.write(init_template.substitute(name='math1'))
     for name, desc in func1.items():
         f.write(func_create_template.substitute(name=name, num_args=1))
     for name, desc in func2.items():
         f.write(func_create_template.substitute(name=name, num_args=2))
     for name, desc in func3.items():
         f.write(func_create_template.substitute(name=name, num_args=3))
+    f.write(footer)
+
+with open(here.parent / 'mathextra1.c', 'wt', encoding='ascii') as f:
+    f.write(header)
+    for name, desc in func1.items():
+        if name not in pbif:
+            f.write(func1_template.substitute(name=name, desc=desc))
+    for name, desc in func2.items():
+        if name not in pbif:
+            f.write(func2_template.substitute(name=name, desc=desc))
+    for name, desc in func3.items():
+        if name not in pbif:
+            f.write(func3_template.substitute(name=name, desc=desc))
+    f.write(init_template.substitute(name='mathextra1'))
+    for name, desc in func1.items():
+        if name not in pbif:
+            f.write(func_create_template.substitute(name=name, num_args=1))
+    for name, desc in func2.items():
+        if name not in pbif:
+            f.write(func_create_template.substitute(name=name, num_args=2))
+    for name, desc in func3.items():
+        if name not in pbif:
+            f.write(func_create_template.substitute(name=name, num_args=3))
     f.write(footer)
